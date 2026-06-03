@@ -396,7 +396,7 @@
         .team-card-header {
             font-family: var(--font-display);
             font-weight: 700;
-            font-size: 0.65rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--nova-accent);
@@ -411,10 +411,10 @@
         }
 
         .team-card li {
-            font-size: 0.95rem;
+            font-size: 0.875rem;
             color: var(--nova-text-secondary);
             padding-left: 0;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         /* ========== PLACEHOLDER ========== */
@@ -473,19 +473,24 @@
 
         .consultant-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.5rem;
+        }
+
+        .consultant-grid.specialists {
+            grid-template-columns: repeat(5, 1fr);
         }
 
         .consultant-card {
             background: var(--nova-bg-secondary);
             border: 1px solid var(--nova-border);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            padding: 0.6rem 0.75rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             transition: all 0.2s ease;
+            gap: 0.4rem;
         }
 
         .consultant-card:hover {
@@ -495,13 +500,13 @@
         .consultant-name {
             font-family: var(--font-display);
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
         }
 
         .consultant-link {
             color: var(--nova-accent);
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -845,8 +850,9 @@
                 padding: 4rem 1.5rem;
             }
 
-            .consultant-grid {
-                grid-template-columns: 1fr;
+            .consultant-grid,
+            .consultant-grid.specialists {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .rubric-grid {
@@ -1133,7 +1139,7 @@
                 <span class="material-icons-outlined">psychology</span>
                 Specialists (Product, AI &amp; Data)
             </h3>
-            <div class="consultant-grid">
+            <div class="consultant-grid specialists">
                 <div class="consultant-card">
                     <span class="consultant-name">Cristian</span>
                     <a href="https://meet.google.com/qcw-qqvf-aup?authuser=0" target="_blank" class="consultant-link">

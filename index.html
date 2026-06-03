@@ -373,7 +373,52 @@
             margin-top: 0.25rem;
         }
 
-        /* ========== TEAMS (placeholder) ========== */
+        /* ========== TEAMS ========== */
+        .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: var(--nova-bg-secondary);
+            border: 1px solid var(--nova-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            border-color: rgba(14, 176, 164, 0.3);
+        }
+
+        .team-card-header {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--nova-accent);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--nova-border);
+        }
+
+        .team-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .team-card li {
+            font-size: 0.9rem;
+            color: var(--nova-text-secondary);
+            padding-left: 0;
+        }
+
+        /* ========== PLACEHOLDER ========== */
         .placeholder-box {
             background: var(--nova-bg-secondary);
             border: 1px dashed rgba(14, 176, 164, 0.3);
@@ -571,16 +616,23 @@
 
         .jury-member {
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 0.75rem;
+            text-align: center;
         }
 
         .jury-photo {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
             object-fit: cover;
-            border: 2px solid var(--nova-accent);
+            border: 2px solid var(--nova-border);
+            transition: border-color 0.2s ease;
+        }
+
+        .jury-member:hover .jury-photo {
+            border-color: var(--nova-accent);
         }
 
         .jury-name {
@@ -979,13 +1031,94 @@
         <div class="section-label fade-in">Teams</div>
         <h2 class="section-title fade-in fade-in-delay-1">Your squad</h2>
         <p class="section-description fade-in fade-in-delay-2">
-            Cross-functional groups of 4, one person per area of expertise.
+            Cross-functional groups balanced by department and expertise.
         </p>
 
-        <div class="placeholder-box fade-in fade-in-delay-3">
-            <span class="material-icons-outlined">groups</span>
-            <p>Teams will be announced soon.</p>
-            <span class="coming-soon">Coming soon</span>
+        <div class="teams-grid">
+            <div class="team-card fade-in">
+                <div class="team-card-header">Team 1</div>
+                <ul>
+                    <li>Marina</li>
+                    <li>Elías</li>
+                    <li>Clarissa</li>
+                    <li>Leyre</li>
+                    <li>Paula</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-1">
+                <div class="team-card-header">Team 2</div>
+                <ul>
+                    <li>Diego</li>
+                    <li>Juan</li>
+                    <li>Fati</li>
+                    <li>Sonia</li>
+                    <li>Manu</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-2">
+                <div class="team-card-header">Team 3</div>
+                <ul>
+                    <li>Celia</li>
+                    <li>Courtney</li>
+                    <li>Pablo</li>
+                    <li>Andrea C.</li>
+                    <li>Rodrigo C.</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-3">
+                <div class="team-card-header">Team 4</div>
+                <ul>
+                    <li>Meri</li>
+                    <li>Ignacio</li>
+                    <li>Anabel</li>
+                    <li>Marce</li>
+                    <li>Cheska</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in">
+                <div class="team-card-header">Team 5</div>
+                <ul>
+                    <li>Elena</li>
+                    <li>Juanjo</li>
+                    <li>Eva</li>
+                    <li>Tamara</li>
+                    <li>Nelva</li>
+                    <li>Sol</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-1">
+                <div class="team-card-header">Team 6</div>
+                <ul>
+                    <li>Fran</li>
+                    <li>Curro</li>
+                    <li>Mer</li>
+                    <li>Sara</li>
+                    <li>Sij</li>
+                    <li>Rodrigo M.</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-2">
+                <div class="team-card-header">Team 7</div>
+                <ul>
+                    <li>Borja</li>
+                    <li>Ana</li>
+                    <li>Lucía</li>
+                    <li>Giulia</li>
+                    <li>Aleko</li>
+                    <li>Raúl</li>
+                </ul>
+            </div>
+            <div class="team-card fade-in fade-in-delay-3">
+                <div class="team-card-header">Team 8</div>
+                <ul>
+                    <li>Alberto</li>
+                    <li>Sofia</li>
+                    <li>Luis</li>
+                    <li>Andrea P.</li>
+                    <li>Rodrigo A.</li>
+                    <li>Angie</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -996,7 +1129,7 @@
         <div class="section-label fade-in">Consultants</div>
         <h2 class="section-title fade-in fade-in-delay-1">Need help? We've got you covered.</h2>
         <p class="section-description fade-in fade-in-delay-2">
-            During the hackathon, specialists and tech generalists will be available for 10-minute consulting sessions via Google Meet.
+            During the hackathon, specialists and tech generalists will be available for 10-minute consulting sessions via Google Meet. The tech team will be available online, though some may also be around the office.
         </p>
 
         <div class="consultants-group fade-in">
@@ -1007,31 +1140,31 @@
             <div class="consultant-grid">
                 <div class="consultant-card">
                     <span class="consultant-name">Cristian</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/qcw-qqvf-aup?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
                     <span class="consultant-name">Jose</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/edq-zyes-dsb?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
                     <span class="consultant-name">Javi</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/iga-rjah-aef?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
                     <span class="consultant-name">Felipe</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/juf-rwxk-gti?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
-                    <span class="consultant-name">Jesus Copado</span>
-                    <a href="#" class="consultant-link">
+                    <span class="consultant-name">Jes&uacute;s C.</span>
+                    <a href="https://meet.google.com/esw-eyjw-ndt?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
@@ -1045,38 +1178,38 @@
             </h3>
             <div class="consultant-grid">
                 <div class="consultant-card">
-                    <span class="consultant-name">Williams</span>
-                    <a href="#" class="consultant-link">
+                    <span class="consultant-name">Will</span>
+                    <a href="https://meet.google.com/urf-dats-jmm?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
-                    <span class="consultant-name">Ivan</span>
-                    <a href="#" class="consultant-link">
+                    <span class="consultant-name">Iv&aacute;n</span>
+                    <a href="https://meet.google.com/gvd-pzed-pbb?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
-                    <span class="consultant-name">Sara Rojas</span>
-                    <a href="#" class="consultant-link">
+                    <span class="consultant-name">Sara</span>
+                    <a href="https://meet.google.com/fgh-xbyd-mxy?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
                     <span class="consultant-name">Mayra</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/jkt-dixj-fhb?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
-                    <span class="consultant-name">Jesus Lagares</span>
-                    <a href="#" class="consultant-link">
+                    <span class="consultant-name">Jes&uacute;s L.</span>
+                    <a href="https://meet.google.com/ijg-vgob-pby?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
                 <div class="consultant-card">
                     <span class="consultant-name">Xavi</span>
-                    <a href="#" class="consultant-link">
+                    <a href="https://meet.google.com/nim-jbpp-cnp?authuser=0" target="_blank" class="consultant-link">
                         Join <span class="material-icons-outlined">videocam</span>
                     </a>
                 </div>
@@ -1259,6 +1392,18 @@
                 <div class="faq-answer">
                     <div class="faq-answer-inner">
                         Just a 2-minute live demo. No slides, no docs. Show what you built and why it matters.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How were the teams formed?
+                    <span class="material-icons-outlined">add</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Teams were designed to maximize diversity: each group mixes people from different departments and balances levels of experience with Claude and AI tools. The goal is that every team has the right ingredients to build something great.
                     </div>
                 </div>
             </div>

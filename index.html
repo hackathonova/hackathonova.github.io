@@ -694,7 +694,7 @@
             background: var(--nova-bg-secondary);
             border: 1px solid var(--nova-border);
             border-radius: 20px;
-            padding: 3rem;
+            padding: 2.5rem;
             text-align: center;
             margin-top: 2rem;
             position: relative;
@@ -712,8 +712,8 @@
         }
 
         .prize-icon {
-            font-size: 56px;
-            margin-bottom: 1.25rem;
+            font-size: 48px;
+            margin-bottom: 1rem;
             display: block;
         }
 
@@ -721,23 +721,61 @@
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.5rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
-        .prize-box p {
+        .prize-box > p {
             color: var(--nova-text-secondary);
             font-size: 1rem;
-            max-width: 400px;
+            max-width: 480px;
             margin: 0 auto;
         }
 
         .prize-value {
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
             color: var(--nova-accent);
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.1rem;
+        }
+
+        .prize-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .prize-option {
+            background: var(--nova-bg-tertiary);
+            border: 1px solid var(--nova-border);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            min-width: 100px;
+            transition: all 0.2s ease;
+        }
+
+        .prize-option:hover {
+            border-color: rgba(14, 176, 164, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .prize-option-icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .prize-option-label {
+            font-family: var(--font-display);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--nova-text-secondary);
         }
 
         /* ========== FAQ ========== */
@@ -1427,8 +1465,35 @@
         <div class="prize-box fade-in fade-in-delay-2">
             <span class="prize-icon">&#127942;</span>
             <h3>A Team Experience</h3>
-            <p>The winning team gets a shared experience to enjoy together.</p>
+            <p>The winning team gets a shared experience to enjoy together. You pick what you'd like to do.</p>
             <span class="prize-value">Valued at 50&#8364; per person</span>
+
+            <div class="prize-options">
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#127869;</span>
+                    <span class="prize-option-label">Team Dinner</span>
+                </div>
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#127917;</span>
+                    <span class="prize-option-label">Escape Room</span>
+                </div>
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#127926;</span>
+                    <span class="prize-option-label">Theater</span>
+                </div>
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#127860;</span>
+                    <span class="prize-option-label">Cocktail Class</span>
+                </div>
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#127923;</span>
+                    <span class="prize-option-label">Bowling</span>
+                </div>
+                <div class="prize-option">
+                    <span class="prize-option-icon">&#128137;</span>
+                    <span class="prize-option-label">Spa Session</span>
+                </div>
+            </div>
         </div>
     </section>
 

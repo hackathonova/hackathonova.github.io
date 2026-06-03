@@ -417,6 +417,54 @@
             line-height: 1.25;
         }
 
+        /* ========== IDEAS ========== */
+        .ideas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.75rem;
+            margin-top: 2.5rem;
+        }
+
+        .idea-card {
+            background: var(--nova-bg-secondary);
+            border: 1px solid var(--nova-border);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .idea-card:hover {
+            border-color: rgba(14, 176, 164, 0.3);
+        }
+
+        .idea-card h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .idea-card h3 .material-icons-outlined {
+            color: var(--nova-accent);
+            font-size: 18px;
+        }
+
+        .idea-card p {
+            font-size: 0.8rem;
+            color: var(--nova-text-secondary);
+            line-height: 1.5;
+        }
+
+        .ideas-note {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--nova-text-secondary);
+            font-style: italic;
+        }
+
         /* ========== PLACEHOLDER ========== */
         .placeholder-box {
             background: var(--nova-bg-secondary);
@@ -1229,12 +1277,58 @@
     <section id="ideas">
         <div class="section-label fade-in">Ideas &amp; Challenges</div>
         <h2 class="section-title fade-in fade-in-delay-1">Don't have an idea yet? No problem.</h2>
+        <p class="section-description fade-in fade-in-delay-2">
+            Here are some ideas to get you started. You're also welcome to bring your own!
+        </p>
 
-        <div class="placeholder-box fade-in fade-in-delay-2">
-            <span class="material-icons-outlined">tips_and_updates</span>
-            <p>A bank of challenge ideas will be shared soon.<br>You're also welcome to bring your own!</p>
-            <span class="coming-soon">Coming soon</span>
+        <div class="ideas-grid">
+            <div class="idea-card fade-in">
+                <h3><span class="material-icons-outlined">mail</span> AI Inbox Triager</h3>
+                <p>A bot that classifies incoming emails (candidates, clients, vendors) and drafts automatic responses. Useful for any team drowning in email.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-1">
+                <h3><span class="material-icons-outlined">record_voice_over</span> Meeting Notes Autopilot</h3>
+                <p>A tool that records/transcribes meetings and automatically generates minutes, action items, and follow-ups using AI.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-2">
+                <h3><span class="material-icons-outlined">description</span> Smart Template Generator</h3>
+                <p>Generate internal documents (proposals, onboarding docs, reports) by filling templates with data and Nova's tone using AI.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-3">
+                <h3><span class="material-icons-outlined">smart_toy</span> Internal Knowledge Bot</h3>
+                <p>A chatbot trained on Nova's internal docs (processes, FAQs, policies) so anyone can find answers without digging through Drive.</p>
+            </div>
+            <div class="idea-card fade-in">
+                <h3><span class="material-icons-outlined">leaderboard</span> Lead Scorer</h3>
+                <p>Analyze incoming leads and score them automatically based on fit with Nova's ideal client profile, prioritizing outreach for the Sales team.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-1">
+                <h3><span class="material-icons-outlined">podcasts</span> Podcast Show Notes Generator</h3>
+                <p>Given a podcast episode, auto-generate show notes, timestamps, key quotes, and ready-to-publish social media posts.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-2">
+                <h3><span class="material-icons-outlined">format_quote</span> Testimonial Curator</h3>
+                <p>Collect and organize member testimonials, categorize them by theme/outcome, and suggest the best ones for each context (web, pitch, social).</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-3">
+                <h3><span class="material-icons-outlined">reviews</span> Client Feedback Analyzer</h3>
+                <p>Collect client feedback, identify patterns and sentiment, and generate actionable insights to improve service delivery.</p>
+            </div>
+            <div class="idea-card fade-in">
+                <h3><span class="material-icons-outlined">mood</span> Nova Lux App</h3>
+                <p>An upgraded, app-based version of Nova Lux: track team mood, surface trends, and generate weekly insights on how the team is doing.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-1">
+                <h3><span class="material-icons-outlined">mic</span> AI Elevator Pitch Coach</h3>
+                <p>A tool that listens to your pitch (for Nova, a client, a candidate) and gives real-time feedback on clarity, tone, and persuasion.</p>
+            </div>
+            <div class="idea-card fade-in fade-in-delay-2">
+                <h3><span class="material-icons-outlined">assistant</span> Community Concierge Bot</h3>
+                <p>An AI agent that helps members get the most out of the Nova community based on their profile, goals, and current moment: suggests events, connections, mentors, and resources.</p>
+            </div>
         </div>
+
+        <p class="ideas-note fade-in">These are just starting points. Feel free to come up with your own idea, combine several, or take one in a completely different direction.</p>
     </section>
 
     <div class="section-divider"><hr></div>

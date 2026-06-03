@@ -740,42 +740,58 @@
             font-size: 1.1rem;
         }
 
+        .prize-examples-label {
+            font-size: 0.8rem;
+            color: var(--nova-text-muted);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
         .prize-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1.75rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0.75rem;
         }
 
         .prize-option {
-            background: var(--nova-bg-tertiary);
-            border: 1px solid var(--nova-border);
-            border-radius: 12px;
-            padding: 1rem 1.25rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.4rem;
-            min-width: 100px;
-            transition: all 0.2s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .prize-option:hover {
-            border-color: rgba(14, 176, 164, 0.3);
             transform: translateY(-2px);
         }
 
-        .prize-option-icon {
-            font-size: 28px;
-            line-height: 1;
+        .prize-option img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.7);
+            transition: filter 0.3s ease;
+        }
+
+        .prize-option:hover img {
+            filter: brightness(0.9);
         }
 
         .prize-option-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.5rem;
             font-family: var(--font-display);
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--nova-text-secondary);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--nova-text-primary);
+            text-align: center;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
         }
 
         /* ========== FAQ ========== */
@@ -1464,30 +1480,31 @@
             <p>The winning team gets a shared experience to enjoy together. You pick what you'd like to do.</p>
             <span class="prize-value">Valued at 50&#8364; per person</span>
 
+            <div class="prize-examples-label">Some ideas, for example...</div>
             <div class="prize-options">
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#127869;</span>
+                    <img src="prizes/dinner.jpg" alt="Team Dinner">
                     <span class="prize-option-label">Team Dinner</span>
                 </div>
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#127926;</span>
+                    <img src="prizes/theater.jpg" alt="Theater">
                     <span class="prize-option-label">Theater</span>
                 </div>
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#127908;</span>
+                    <img src="prizes/concert.jpg" alt="Concert">
                     <span class="prize-option-label">Concert</span>
                 </div>
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#127860;</span>
+                    <img src="prizes/cocktail.jpg" alt="Cocktail Class">
                     <span class="prize-option-label">Cocktail Class</span>
                 </div>
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#127923;</span>
+                    <img src="prizes/bowling.jpg" alt="Bowling">
                     <span class="prize-option-label">Bowling</span>
                 </div>
                 <div class="prize-option">
-                    <span class="prize-option-icon">&#128137;</span>
-                    <span class="prize-option-label">Spa Session</span>
+                    <img src="prizes/spa.jpg" alt="Spa Session">
+                    <span class="prize-option-label">Spa</span>
                 </div>
             </div>
         </div>
